@@ -85,15 +85,12 @@ func returnJSON(data []byte, w http.ResponseWriter, r *http.Request) {
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
 	var data interface{}
-	renderTemplate(w, "index", data)
-}
 
-func renderTemplate(w http.ResponseWriter, tmpl string, data interface{}) {
 	// write content type to head
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
 
 	// render layout
-	err := templates.ExecuteTemplate(w, tmpl+".html", data)
+	err := templates.ExecuteTemplate(w, "index.html", data)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
