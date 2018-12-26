@@ -28,6 +28,10 @@ a:focus, a:hover {
 	text-decoration: none;
 }
 
+#title {
+  color: black;
+}
+
 .container {
   padding-bottom: 70px;
 }
