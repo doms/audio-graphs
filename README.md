@@ -1,3 +1,3 @@
-## visual features
+## Audio Graphs
 
-Allows you to get the audio features of a song
+Allows you to view the audio features of a song
