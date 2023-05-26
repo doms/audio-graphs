@@ -1,7 +1,21 @@
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
-import { getTracks, getAudioFeatures } from '@/lib/spotify'
-// import styles from '@/styles/Home.module.css'
+import React from 'react'
+
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js'
+import { Bar } from 'react-chartjs-2'
+
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
+
+import styles from '@/styles/Home.module.css'
 
 export default function Home() {
   // 1. search tracks from query
